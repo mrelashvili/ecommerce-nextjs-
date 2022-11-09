@@ -49,21 +49,19 @@ const Cart = () => {
                 </div>
                 <div className="flex bottom">
                   <div>
-                    <p className="quantity-desc">
-                    <span className="minus" onClick={() => toggleCartItemQuantity(item._id, 'dec')}>
-                      <AiOutlineMinus />
-                      </span>
-                      <span className="num">{item.quantity}</span>
-                      <span className="plus" onClick={() => toggleCartItemQuantity(item._id, 'inc')}>
-                      <AiOutlinePlus />
-                      </span>
-                    </p>
+                  <p className="quantity-desc">
+                    <span className="minus" onClick={() => toggleCartItemQuantity(item._id, 'dec') }>
+                    <AiOutlineMinus />
+                    </span>
+                    <span className="num">{item.quantity}</span>
+                    <span className="plus" onClick={() => toggleCartItemQuantity(item._id, 'inc') }><AiOutlinePlus /></span>
+                  </p>
                   </div>
 
                   <button 
                   type="button"
                   className="remove-item"
-                  onClick="">
+                  >
                     <TiDeleteOutline />
                   </button>
                 </div>
@@ -81,7 +79,7 @@ const Cart = () => {
             
             <div className="btn-container">
               <button type="button" className="btn"
-              onClick="">
+              >
                 Pay with Stripe
               </button>
             </div>
