@@ -6,6 +6,8 @@ import { useRouter } from 'next/router';
 
 import { useStateContext } from '../context/stateContext'
 
+import { runFireworks } from '../lib/utils'
+
 const Success = () => {
 
   const [order, setOrder] = useState(null)
@@ -16,6 +18,7 @@ const Success = () => {
     setCartItems([]);
     setToTalPrice(0);
     setToTalQuantities(0);
+    runFireworks();
   }, [])
 
   return (
